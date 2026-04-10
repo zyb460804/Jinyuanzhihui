@@ -92,6 +92,15 @@ onBeforeUnmount(() => {
 <template>
   <div class="screen-root">
     <canvas ref="starsRef" class="star-layer"></canvas>
+
+    <!-- Premium background -->
+    <div class="bg-premium">
+      <div class="bg-orb bg-orb-1"></div>
+      <div class="bg-orb bg-orb-2"></div>
+      <div class="bg-orb bg-orb-3"></div>
+      <div class="bg-vignette"></div>
+    </div>
+
     <div class="screen-shell">
       <ScreenHeader :header="header" />
       <el-alert
