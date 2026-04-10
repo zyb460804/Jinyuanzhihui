@@ -129,5 +129,8 @@ onBeforeUnmount(() => {
       <span>{{ process.timeline[0] }}</span>
       <span>{{ process.timeline[process.timeline.length - 1] }}</span>
     </div>
+    <div class="chart-footer">
+      <span class="data-time">数据采集时间: {{ process.timeline[0] }} ~ {{ process.timeline[process.timeline.length - 1] }}</span>
+    </div>
   </section>
 </template>

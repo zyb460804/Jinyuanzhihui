@@ -156,5 +156,55 @@ onBeforeUnmount(() => {
       <div :id="playerId" class="video-canvas"></div>
       <div v-if="statusText" class="video-placeholder">{{ statusText }}</div>
     </div>
+
+    <div class="bottom-panels">
+      <div class="bottom-panel">
+        <div class="bottom-panel-title">产业动态</div>
+        <div class="bottom-panel-content">
+          <div class="industry-item">
+            <span class="industry-label">生产进度</span>
+            <div class="industry-progress">
+              <div class="industry-progress-bar" style="width: 78%"></div>
+            </div>
+            <span class="industry-value">78%</span>
+          </div>
+          <div class="industry-item">
+            <span class="industry-label">设备运转</span>
+            <div class="industry-progress">
+              <div class="industry-progress-bar" style="width: 92%"></div>
+            </div>
+            <span class="industry-value">92%</span>
+          </div>
+          <div class="industry-item">
+            <span class="industry-label">能耗指数</span>
+            <div class="industry-progress">
+              <div class="industry-progress-bar industry-progress-bar-warning" style="width: 65%"></div>
+            </div>
+            <span class="industry-value">65%</span>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-panel">
+        <div class="bottom-panel-title">PLC屏</div>
+        <div class="bottom-panel-content plc-content">
+          <div class="plc-item">
+            <span class="plc-label">主电机</span>
+            <span class="plc-status plc-status-running">运行</span>
+          </div>
+          <div class="plc-item">
+            <span class="plc-label">辅电机</span>
+            <span class="plc-status plc-status-running">运行</span>
+          </div>
+          <div class="plc-item">
+            <span class="plc-label">温控阀</span>
+            <span class="plc-status plc-status-idle">待机</span>
+          </div>
+          <div class="plc-item">
+            <span class="plc-label">压力泵</span>
+            <span class="plc-status plc-status-running">运行</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 </template>

@@ -126,54 +126,81 @@ onBeforeUnmount(() => {
             </div>
           </section>
 
-          <section class="screen-panel market-panel">
-            <div class="panel-title">市场看板</div>
-            <div class="summary-cards">
-              <article
-                v-for="item in panelData.marketCards"
-                :key="item.title"
-                class="summary-card"
-              >
-                <span>{{ item.title }}</span>
-                <strong>{{ item.value }}</strong>
-                <em>{{ item.delta }}</em>
-              </article>
-            </div>
-
-            <div class="section-caption">
-              <span>渠道动态</span>
-              <span>本周</span>
-            </div>
-
-            <div class="progress-list">
-              <div
-                v-for="item in panelData.channelDynamics"
-                :key="item.name"
-                class="progress-row"
-              >
-                <span>{{ item.name }}</span>
-                <div class="progress-track">
-                  <i :style="{ width: `${item.value}%` }"></i>
+          <section class="screen-panel notification-panel">
+            <div class="panel-title">通知提示</div>
+            <div class="notification-list">
+              <div class="notification-item">
+                <span class="notification-dot notification-dot-online"></span>
+                <span class="notification-label">在岗人员检测</span>
+                <span class="notification-value">64人</span>
+              </div>
+              <div class="notification-item">
+                <span class="notification-dot notification-dot-progress"></span>
+                <span class="notification-label">任务完成情况</span>
+                <div class="notification-progress">
+                  <div class="notification-progress-bar" style="width: 78%"></div>
                 </div>
-                <strong>{{ item.value }}%</strong>
+                <span class="notification-value">78%</span>
+              </div>
+              <div class="notification-item">
+                <span class="notification-dot notification-dot-data"></span>
+                <span class="notification-label">数据分析</span>
+                <span class="notification-status">正常</span>
+              </div>
+              <div class="notification-item">
+                <span class="notification-dot notification-dot-warning"></span>
+                <span class="notification-label">风险提示</span>
+                <span class="notification-status warning">低压</span>
+              </div>
+              <div class="notification-item">
+                <span class="notification-dot notification-dot-device"></span>
+                <span class="notification-label">设备使用</span>
+                <span class="notification-value">18/24</span>
               </div>
             </div>
           </section>
 
-          <section class="screen-panel status-panel">
-            <div class="section-caption section-caption-compact">
-              <span>订单状态</span>
-              <span>实时</span>
-            </div>
-            <div class="status-grid">
-              <article
-                v-for="item in panelData.orderStatus"
-                :key="item.title"
-                class="status-item"
-              >
-                <span>{{ item.title }}</span>
-                <strong>{{ item.value }}</strong>
-              </article>
+          <section class="screen-panel inspection-panel">
+            <div class="panel-title">监测检验报告</div>
+            <div class="inspection-content">
+              <div class="inspection-section">
+                <div class="inspection-section-title">实时质检数据</div>
+                <div class="inspection-grid">
+                  <div class="inspection-item">
+                    <span class="inspection-label">PH值</span>
+                    <span class="inspection-value">7.2</span>
+                  </div>
+                  <div class="inspection-item">
+                    <span class="inspection-label">浊度</span>
+                    <span class="inspection-value">0.8NTU</span>
+                  </div>
+                  <div class="inspection-item">
+                    <span class="inspection-label">纯度</span>
+                    <span class="inspection-value">99.2%</span>
+                  </div>
+                  <div class="inspection-item">
+                    <span class="inspection-label">密度</span>
+                    <span class="inspection-value">1.05</span>
+                  </div>
+                </div>
+              </div>
+              <div class="inspection-section">
+                <div class="inspection-section-title">质量控制</div>
+                <div class="quality-status">
+                  <div class="quality-item">
+                    <span class="quality-label">原料检验</span>
+                    <span class="quality-badge quality-pass">合格</span>
+                  </div>
+                  <div class="quality-item">
+                    <span class="quality-label">过程检验</span>
+                    <span class="quality-badge quality-pass">合格</span>
+                  </div>
+                  <div class="quality-item">
+                    <span class="quality-label">成品检验</span>
+                    <span class="quality-badge quality-pass">合格</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
         </aside>
